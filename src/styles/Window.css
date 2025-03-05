@@ -1,0 +1,17 @@
+.window {
+    position: fixed;
+    background: var(--colour-black-transparent);
+    width: 25vw;
+    padding: 1rem;
+    border: 0.2rem solid white;
+}
+
+.window h2 {
+    text-align: center;
+}
+
+#world-window {
+    top: 50vh;
+    left: 80vw;
+    transform: translate(-50%, -50%);
+}
