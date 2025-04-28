@@ -10,7 +10,18 @@ function App() {
         <>
             <Header/>
             <Canvas/>
-            <Window/>
+            <Window
+                id="world"
+                name="World Config"
+                x="10vw"
+                y="40vh"
+            />
+            <Window
+                id="biome"
+                name="rainvalley"
+                x="70vw"
+                y="20vh"
+            />
         </>
     );
 

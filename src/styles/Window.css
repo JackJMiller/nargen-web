@@ -2,16 +2,34 @@
     position: fixed;
     background: var(--colour-black-transparent);
     width: 25vw;
-    padding: 1rem;
     border: 0.2rem solid white;
+    top: 30vh;
+    left: 50vw;
 }
 
-.window h2 {
+.window-header {
+    height: 3rem;
+    line-height: 3rem;
     text-align: center;
 }
 
-#world-window {
-    top: 50vh;
-    left: 80vw;
-    transform: translate(-50%, -50%);
+.window-content {
+    height: 50vh;
+    overflow-y: scroll;
+}
+
+.window-content-inner {
+    padding: 1rem;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--colour-white-transparent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: white;
 }
