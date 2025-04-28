@@ -2,8 +2,7 @@ import TextBoxInput from "./TextBoxInput";
 import "../styles/Window.css";
 
 interface Props {
-    type: "world" | "biome",
-    id: string
+    type: "world" | "biome"
 }
 
 function WorldWindow(props: Props) {
@@ -15,7 +14,10 @@ function WorldWindow(props: Props) {
                 <TextBoxInput name="Max height"/>
                 <TextBoxInput name="Width"/>
                 <TextBoxInput name="Height"/>
+                <TextBoxInput name="Q"/>
+                <TextBoxInput name="R"/>
                 <TextBoxInput name="Biome size"/>
+                <TextBoxInput name="Biomes"/>
             </div>
         </div>
     );

@@ -3,7 +3,7 @@ import "../styles/Window.css";
 
 interface Props {
     type: "world" | "biome",
-    id: string
+    type: string
 }
 
 function BiomeWindow(props: Props) {
@@ -11,11 +11,8 @@ function BiomeWindow(props: Props) {
     return (
         <div className="window-content">
             <div className="window-content-inner">
-                <TextBoxInput name="Seed"/>
-                <TextBoxInput name="Max height"/>
-                <TextBoxInput name="Width"/>
-                <TextBoxInput name="Height"/>
-                <TextBoxInput name="Biome size"/>
+                <TextBoxInput name="Colour"/>
+                <TextBoxInput name="Ranges"/>
             </div>
         </div>
     );
