@@ -1,4 +1,4 @@
-import TextBoxInput from "./TextBoxInput";
+import ConfigInput from "./ConfigInput";
 import "../styles/Window.css";
 
 interface Props {
@@ -10,14 +10,14 @@ function WorldWindow(props: Props) {
     return (
         <div className="window-content">
             <div className="window-content-inner">
-                <TextBoxInput name="Seed"/>
-                <TextBoxInput name="Max height"/>
-                <TextBoxInput name="Width"/>
-                <TextBoxInput name="Height"/>
-                <TextBoxInput name="Q"/>
-                <TextBoxInput name="R"/>
-                <TextBoxInput name="Biome size"/>
-                <TextBoxInput name="Biomes"/>
+                <ConfigInput name="Seed" type="number"/>
+                <ConfigInput name="Max height" type="number"/>
+                <ConfigInput name="Width" type="number"/>
+                <ConfigInput name="Height" type="number"/>
+                <ConfigInput name="Q" type="number"/>
+                <ConfigInput name="R" type="number"/>
+                <ConfigInput name="Biome size" type="number"/>
+                <ConfigInput name="Biomes" type="number"/>
             </div>
         </div>
     );

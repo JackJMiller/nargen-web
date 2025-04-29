@@ -1,18 +1,19 @@
 import "../styles/TextBoxInput.css";
 
 interface Props {
-    name: string
+    name: string,
+    type: string
 }
 
-function TextBoxInput(props: Props) {
+function TextBoxInput({ name, type, ...props }: Props) {
     return (
         <>
-            <h2>{props.name}</h2>
             <input
                 className="text-box-input"
-                type="text"
-                placeholder={props.name}
-                onChange={({ target: { value } }) => console.log(value)}
+                type={ type }
+                placeholder={ name }
+                { ...props }
+                onChange={ ({ target: { value } }) => console.log(value) }
             />
         </>
     );

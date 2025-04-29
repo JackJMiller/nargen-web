@@ -1,20 +1,20 @@
 .window {
     position: fixed;
     background: var(--colour-black-transparent);
-    width: 25vw;
+    width: 35rem;
     border: 0.2rem solid white;
     top: 30vh;
     left: 50vw;
 }
 
 .window-header {
-    height: 3rem;
-    line-height: 3rem;
+    height: 4rem;
+    line-height: 4rem;
     text-align: center;
 }
 
 .window-content {
-    height: 50vh;
+    height: 30vh;
     overflow-y: scroll;
 }
 
