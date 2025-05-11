@@ -1,5 +1,6 @@
 import ConfigInput from "./ConfigInput";
 import "../styles/Window.css";
+import { GRID_IMAGE_FILENAMES } from "../scripts/constants";
 
 function WorldWindow(props) {
 
