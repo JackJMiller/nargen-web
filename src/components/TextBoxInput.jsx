@@ -17,9 +17,6 @@ function TextBoxInput({ name, type, ...props }) {
 
             world.summarise();
 
-            // generate terrain world according to configuration
-            //RENDERER.renderChunks(worldName, WORLD_NAME);
-
         }
     };
 

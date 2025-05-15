@@ -8,7 +8,9 @@ function App() {
     return (
         <>
             <Header/>
-            <Canvas/>
+            <div id="surface-layer" className="layer">
+                
+            </div>
             <Window
                 type="world"
                 name="World Config"
@@ -19,13 +21,13 @@ function App() {
                 type="biome"
                 name="rainvalley"
                 x="70vw"
-                y="20vh"
+                y="10vh"
             />
             <Window
                 type="sub-biome"
                 name="rainvalley.clusters"
-                x="40vw"
-                y="30vh"
+                x="70vw"
+                y="50vh"
             />
         </>
     );
