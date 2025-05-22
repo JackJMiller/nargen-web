@@ -1,4 +1,4 @@
-import { MouseEvent, useState } from "react";
+import { useState } from "react";
 
 import BiomeWindow from "./BiomeWindow";
 import SubBiomeWindow from "./SubBiomeWindow";
