@@ -16,24 +16,18 @@ function App() {
                     <SurfaceView/>
                 </Draggable>
 
-                <Window
-                    type="world"
-                    name="World Config"
-                    x="10vw"
-                    y="40vh"
-                />
-                <Window
-                    type="biome"
-                    name="rainvalley"
-                    x="70vw"
-                    y="10vh"
-                />
-                <Window
-                    type="sub-biome"
-                    name="rainvalley.clusters"
-                    x="70vw"
-                    y="50vh"
-                />
+                <Draggable x={ 0.1 * window.innerWidth} y={ 0.7 * window.innerHeight }>
+                    <Window type="world" name="World Config"/>
+                </Draggable>
+
+                <Draggable x={ 0.3 * window.innerWidth } y={ 0.7 * window.innerHeight }>
+                    <Window type="biome" name="rainvalley"/>
+                </Draggable>
+
+                <Draggable x={ 0.5 * window.innerWidth } y={ 0.7 * window.innerHeight }>
+                    <Window type="sub-biome" name="rainvalley.clusters"/>
+                </Draggable>
+
             </div>
         </>
     );

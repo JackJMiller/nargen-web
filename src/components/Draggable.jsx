@@ -10,6 +10,8 @@ function Draggable(props) {
         setX(event.clientX);
         setY(event.clientY);
         setMouseDown(true);
+        console.log(event.clientX);
+        console.log(event.clientY);
     };
 
     const onMouseUp = (event) => {
@@ -27,7 +29,7 @@ function Draggable(props) {
         position: "fixed",
         top: y,
         left: x,
-        transform: "translate(-50%, -50%)",
+        transform: "translate(-50%, -50%)"
     };
 
     return (

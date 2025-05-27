@@ -1,10 +1,8 @@
 .window {
-    position: fixed;
+    display: block;
     background: var(--colour-black-transparent);
     width: 35rem;
     border: 0.2rem solid white;
-    top: 30vh;
-    left: 50vw;
 }
 
 .window-header {
