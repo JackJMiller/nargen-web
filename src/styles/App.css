@@ -1,8 +1,4 @@
-.layer {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+#body {
+    width: 100vw;
+    height: 100vh;
 }
