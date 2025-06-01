@@ -7,11 +7,16 @@ function Draggable(props) {
     let [mouseDown, setMouseDown] = useState(false);
 
     const onMouseDown = (event) => {
-        setX(event.clientX);
-        setY(event.clientY);
-        setMouseDown(true);
-        console.log(event.clientX);
-        console.log(event.clientY);
+        if (props.dragBoxClassName === undefined) {
+            setX(event.clientX);
+            setY(event.clientY);
+            setMouseDown(true);
+        }
+        else if (props.dragBoxClassName === event.target.className) {
+            setX(event.clientX - event.target.clientWidth / 2);
+            setY(event.clientY - event.target.clientHeight / 2);
+            setMouseDown(true);
+        }
     };
 
     const onMouseUp = (event) => {
@@ -21,15 +26,20 @@ function Draggable(props) {
     const onMouseMove = (event) => {
         event.preventDefault();
         if (!mouseDown) return;
-        setX(event.clientX);
-        setY(event.clientY);
+        if (props.dragBoxClassName === undefined) {
+            setX(event.clientX);
+            setY(event.clientY);
+        }
+        else {
+            setX(event.clientX - event.target.clientWidth / 2);
+            setY(event.clientY - event.target.clientHeight / 2);
+        }
     };
 
     const style = {
         position: "fixed",
         top: y,
-        left: x,
-        transform: "translate(-50%, -50%)"
+        left: x
     };
 
     return (

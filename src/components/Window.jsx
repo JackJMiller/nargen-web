@@ -23,9 +23,7 @@ function Window(props) {
     
     return (
         <div className="window">
-            <div className="window-header">
-                <h1>{ props.name }</h1>
-            </div>
+            <h1 className="window-header">{ props.name }</h1>
             <div className="window-content">
                 { content }
             </div>
