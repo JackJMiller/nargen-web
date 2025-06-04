@@ -1,3 +1,7 @@
+:root {
+    --header-height: 4rem;
+}
+
 #header {
     display: grid;
     grid-template-columns: 1fr 6fr 2fr;
@@ -5,11 +9,15 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: 3rem;
-    line-height: 3rem;
-    text-align: center;
+    height: var(--header-height);
+    line-height: var(--header-height);
     background: var(--colour-white-transparent);
     transition: background 200ms;
+    text-align: center;
+}
+
+#header:hover {
+    background: #eeeeee;
 }
 
 #header .logo {
@@ -24,29 +32,25 @@
 #header-right {
     display: grid;
     grid-template-columns: auto auto;
+}
+
+#header-right button {
     background: black;
+    color: white;
 }
 
 #header-centre-inner {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(6, auto);
     width: fit-content;
 }
 
 .header-button {
-    padding: 0 2rem;
-    line-height: 3rem;
+    line-height: var(--header-height);
+    padding: 0 1.5rem;
     background: none;
 }
 
-#header-centre:hover {
-    background: white;
-}
-
-#header-centre-inner .header-button:hover {
-    background: #eeeeee;
-}
-
-#header-right .header-button {
-    color: white;
+.header-button:hover {
+    background: #cccccc;
 }
