@@ -1,0 +1,18 @@
+.menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + var(--header-height) / 2));
+    background: #333333;
+    display: block;
+    width: 80vw;
+    height: calc(100vh - 3 * var(--header-height));
+}
+
+.menu-screen {
+}
+
+.menu-backdrop {
+    width: 100vw;
+    height: 100vh;
+}

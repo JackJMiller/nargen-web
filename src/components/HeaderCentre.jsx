@@ -1,6 +1,6 @@
 import "../styles/Header.css";
 
-function HeaderCentre() {
+function HeaderCentre(props) {
     return (
         <div id="header-centre">
             <div id="header-centre-inner">
@@ -17,7 +17,7 @@ function HeaderCentre() {
                     Export
                 </button>
 
-                <button className="header-button" onClick={ () => console.log("Panes") }>
+                <button className="header-button" onClick={ () => props.setScreen("panes") }>
                     Panes
                 </button>
 
