@@ -1,11 +1,14 @@
-import Canvas from "./components/Canvas";
+import { useState } from "react";
+
 import Draggable from "./components/Draggable";
+import EditScreen from "./components/EditScreen";
 import Header from "./components/Header";
 import SurfaceView from "./components/SurfaceView";
-import Window from "./components/Window";
 import "./styles/App.css";
 
 function App() {
+
+    const [screen, setScreen] = useState("edit");
 
     return (
         <>
@@ -16,17 +19,7 @@ function App() {
                     <SurfaceView/>
                 </Draggable>
 
-                <Draggable x={ 0.1 * window.innerWidth} y={ 0.6 * window.innerHeight } dragBoxClassName="window-header">
-                    <Window type="world" name="World Config"/>
-                </Draggable>
-
-                <Draggable x={ 0.3 * window.innerWidth } y={ 0.6 * window.innerHeight } dragBoxClassName="window-header">
-                    <Window type="biome" name="rainvalley"/>
-                </Draggable>
-
-                <Draggable x={ 0.5 * window.innerWidth } y={ 0.6 * window.innerHeight } dragBoxClassName="window-header">
-                    <Window type="sub-biome" name="rainvalley.clusters"/>
-                </Draggable>
+                <EditScreen/>
 
             </div>
         </>
