@@ -1,20 +1,22 @@
 import Draggable from "./Draggable";
-import Window from "./Window";
+import BiomeWindow from "./BiomeWindow";
+import SubBiomeWindow from "./SubBiomeWindow";
+import WorldWindow from "./WorldWindow";
 
 function EditScreen() {
 
     return (
         <>
             <Draggable x={ 0.1 * window.innerWidth} y={ 0.6 * window.innerHeight } dragBoxClassName="window-header">
-                <Window type="world" name="World Config"/>
+                <WorldWindow name="World Config"/>
             </Draggable>
 
             <Draggable x={ 0.3 * window.innerWidth } y={ 0.6 * window.innerHeight } dragBoxClassName="window-header">
-                <Window type="biome" name="rainvalley"/>
+                <BiomeWindow name="rainvalley"/>;
             </Draggable>
 
             <Draggable x={ 0.5 * window.innerWidth } y={ 0.6 * window.innerHeight } dragBoxClassName="window-header">
-                <Window type="sub-biome" name="rainvalley.clusters"/>
+                <SubBiomeWindow name="rainvalley.clusters"/>;
             </Draggable>
         </>
     );
