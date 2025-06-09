@@ -1,13 +1,13 @@
 import ConfigInput from "./ConfigInput";
-import Window from "./Window";
+import Pane from "./Pane";
 
-import "../styles/Window.css";
+import "../styles/Pane.css";
 import { GRID_IMAGE_FILENAMES } from "../scripts/constants";
 
-function WorldWindow(props) {
+function WorldPane(props) {
 
     return (
-        <Window width="30rem" name={ props.name }>
+        <Pane width="30rem" name={ props.name }>
             <div className="window-content">
                 <div className="window-content-inner">
                     <ConfigInput name="Seed" type="number"/>
@@ -20,9 +20,9 @@ function WorldWindow(props) {
                     <ConfigInput name="Biomes" type="number"/>
                 </div>
             </div>
-        </Window>
+        </Pane>
     );
 
 }
 
-export default WorldWindow;
+export default WorldPane;

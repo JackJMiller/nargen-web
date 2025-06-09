@@ -1,23 +1,23 @@
 import ColourInput from "./ColourInput";
 import ConfigInput from "./ConfigInput";
 import TextBoxInput from "./TextBoxInput";
-import Window from "./Window";
+import Pane from "./Pane";
 
-import "../styles/Window.css";
+import "../styles/Pane.css";
 
-function BiomeWindow(props) {
+function BiomePane(props) {
 
     return (
-        <Window width="30rem" name={ props.name }>
+        <Pane width="30rem" name={ props.name }>
             <div className="window-content">
                 <div className="window-content-inner">
                     <ColourInput name="Colour"/>
                     <ConfigInput name="Ranges" type="number"/>
                 </div>
             </div>
-        </Window>
+        </Pane>
     );
 
 }
 
-export default BiomeWindow;
+export default BiomePane;

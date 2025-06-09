@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 import TextBoxInput from "./TextBoxInput";
-import "../styles/Window.css";
+import "../styles/Pane.css";
 
-function Window(props) {
+function Pane(props) {
 
     let windowStyle = {
         "display": "block",
@@ -23,4 +23,4 @@ function Window(props) {
 
 }
 
-export default Window;
+export default Pane;

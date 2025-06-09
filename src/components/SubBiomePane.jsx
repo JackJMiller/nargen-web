@@ -1,13 +1,13 @@
 import ColourInput from "./ColourInput";
 import ConfigInput from "./ConfigInput";
-import Window from "./Window";
+import Pane from "./Pane";
 
-import "../styles/Window.css";
+import "../styles/Pane.css";
 
-function SubBiomeWindow(props) {
+function SubBiomePane(props) {
 
     return (
-        <Window width="30rem" name={ props.name }>
+        <Pane width="30rem" name={ props.name }>
             <div className="window-content">
                 <div className="window-content-inner">
                     <ColourInput name="Colour"/>
@@ -19,9 +19,9 @@ function SubBiomeWindow(props) {
                     <ConfigInput name="Blend" type="number"/>
                 </div>
             </div>
-        </Window>
+        </Pane>
     );
 
 }
 
-export default SubBiomeWindow;
+export default SubBiomePane;
