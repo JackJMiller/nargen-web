@@ -2,8 +2,8 @@
     font-size: 0.5vw;
     color: white;
     font-family: monospace;
-    --colour-black-transparent: rgba(0, 0, 0, 0.6);
-    --colour-white-transparent: rgba(255, 255, 255, 0.6);
+    --colour-black-transparent: rgba(0, 0, 0, 0.8);
+    --colour-white-transparent: rgba(255, 255, 255, 0.8);
 }
 
 * {

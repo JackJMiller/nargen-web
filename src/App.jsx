@@ -20,7 +20,7 @@ function App() {
                     <SurfaceView/>
                 </Draggable>
 
-                { screen === "edit" && <EditScreen/> }
+                <EditScreen/>
 
                 { screen === "panes" && <PanesScreen setScreen={ setScreen }/> }
 

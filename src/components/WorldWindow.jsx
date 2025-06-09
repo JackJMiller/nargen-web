@@ -7,7 +7,7 @@ import { GRID_IMAGE_FILENAMES } from "../scripts/constants";
 function WorldWindow(props) {
 
     return (
-        <Window name={ props.name }>
+        <Window width="30rem" name={ props.name }>
             <div className="window-content">
                 <div className="window-content-inner">
                     <ConfigInput name="Seed" type="number"/>

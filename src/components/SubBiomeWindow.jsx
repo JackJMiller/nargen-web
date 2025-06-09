@@ -7,7 +7,7 @@ import "../styles/Window.css";
 function SubBiomeWindow(props) {
 
     return (
-        <Window name={ props.name }>
+        <Window width="30rem" name={ props.name }>
             <div className="window-content">
                 <div className="window-content-inner">
                     <ColourInput name="Colour"/>

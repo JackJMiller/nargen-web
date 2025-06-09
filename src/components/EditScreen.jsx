@@ -12,11 +12,11 @@ function EditScreen() {
             </Draggable>
 
             <Draggable x={ 0.3 * window.innerWidth } y={ 0.6 * window.innerHeight } dragBoxClassName="window-header">
-                <BiomeWindow name="rainvalley"/>;
+                <BiomeWindow name="rainvalley"/>
             </Draggable>
 
             <Draggable x={ 0.5 * window.innerWidth } y={ 0.6 * window.innerHeight } dragBoxClassName="window-header">
-                <SubBiomeWindow name="rainvalley.clusters"/>;
+                <SubBiomeWindow name="rainvalley.clusters"/>
             </Draggable>
         </>
     );

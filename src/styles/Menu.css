@@ -9,10 +9,10 @@
     height: calc(100vh - 3 * var(--header-height));
 }
 
-.menu-screen {
-}
-
 .menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: 100vh;
 }
