@@ -7,6 +7,12 @@
     display: block;
     width: 80vw;
     height: calc(100vh - 3 * var(--header-height));
+    padding: 2rem;
+}
+
+.menu-select-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
 
 .menu-backdrop {
