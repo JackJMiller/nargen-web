@@ -1,38 +1,9 @@
-import { useState } from "react";
-
 import Draggable from "./Draggable";
 import BiomePane from "./BiomePane";
 import SubBiomePane from "./SubBiomePane";
 import WorldPane from "./WorldPane";
 
-import { RECOGNISED_BIOME_ATTRIBUTES } from "../scripts/constants";
-import { FILESYSTEM } from "../scripts/env_script";
-
-function EditScreen() {
-
-    let determinePaneType = (paneName) => {
-        let split = paneName.split("/");
-        return (split[1] === "biomes") ? "biome" : "world";
-    };
-
-    let deriveSubBiomePanes = (biomeConfig) => {
-        let names = Object.keys(biomeConfig);
-        names = names.filter((name) => !RECOGNISED_BIOME_ATTRIBUTES.includes(name));
-        return names.map((name) => { return { type: "sub-biome", name: name } });
-    };
-
-    let derivePanes = () => {
-        let output = [];
-        let filenames = Object.keys(FILESYSTEM);
-        for (let filename of filenames) {
-            let type = determinePaneType(filename);
-            output.push({ type, name: filename });
-            if (type === "biome") {
-                output = output.concat(deriveSubBiomePanes(FILESYSTEM[filename]));
-            }
-        }
-        return output;
-    };
+function EditScreen(props) {
 
     let renderPane = (pane) => {
         switch (pane.type) {
@@ -57,11 +28,9 @@ function EditScreen() {
         }
     };
 
-    let [panes, setPanes] = useState(derivePanes());
-
     return (
         <>
-            { panes.map((pane) => renderPane(pane)) }
+            { props.panes.filter((pane) => pane.visible).map((pane) => renderPane(pane)) }
         </>
     );
 
