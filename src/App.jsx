@@ -21,7 +21,7 @@ function App() {
     let deriveSubBiomePanes = (biomeConfig) => {
         let names = Object.keys(biomeConfig);
         names = names.filter((name) => !RECOGNISED_BIOME_ATTRIBUTES.includes(name));
-        return names.map((name) => { return { type: "sub-biome", name: name, visible: true } });
+        return names.map((name) => { return { type: "sub-biome", name: name, visible: false } });
     };
 
     let derivePanes = () => {
@@ -29,12 +29,18 @@ function App() {
         let filenames = Object.keys(FILESYSTEM);
         for (let filename of filenames) {
             let type = determinePaneType(filename);
-            output.push({ type, name: filename, visible: true });
+            output.push({ type, name: filename, visible: (type === "world") });
             if (type === "biome") {
                 output = output.concat(deriveSubBiomePanes(FILESYSTEM[filename]));
             }
         }
         return output;
+    };
+
+    let setPaneVisibility = (index, visible) => {
+        panes[index].visible = visible;
+        setPanes(panes);
+        console.log(panes);
     };
 
     let [panes, setPanes] = useState(derivePanes());
@@ -52,7 +58,7 @@ function App() {
 
                 <EditScreen panes={ panes } />
 
-                { screen === "panes" && <PanesScreen setScreen={ setScreen } panes={ panes } setPanes={ setPanes }/> }
+                { screen === "panes" && <PanesScreen setScreen={ setScreen } panes={ panes } setPaneVisibility={ setPaneVisibility }/> }
 
             </div>
         </>

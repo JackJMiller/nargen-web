@@ -14,7 +14,7 @@ function PanesScreen(props) {
                     return (
                         <div key={ index} className="menu-select-container">
                             <h2>{ pane.name }</h2>
-                            <input type="checkbox" onChange={ (e) => console.log(e.target.checked) }/>
+                            <input type="checkbox" onChange={ (e) => props.setPaneVisibility(index, e.target.checked) } checked={ pane.visible }/>
                         </div>
                     );
                 })
