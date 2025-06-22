@@ -40,7 +40,6 @@ function App() {
     let setPaneVisibility = (index, visible) => {
         panes[index].visible = visible;
         setPanes(panes);
-        console.log(panes);
     };
 
     let [panes, setPanes] = useState(derivePanes());

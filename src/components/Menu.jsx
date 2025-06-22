@@ -1,10 +1,10 @@
 import "../styles/Menu.css";
 
-function Menu(props) {
+function Menu({ setScreen, ...props }) {
 
     return (
         <div>
-            <div className="menu-backdrop" onClick={ () => props.setScreen("edit") }></div>
+            <div className="menu-backdrop" onClick={ () => setScreen("edit") }></div>
             <div className="menu">
                 <div className="menu-inner">
                     { props.children }
