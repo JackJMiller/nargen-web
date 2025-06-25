@@ -7,7 +7,7 @@ import PanesScreen from "./components/PanesScreen";
 import SurfaceView from "./components/SurfaceView";
 
 import { RECOGNISED_BIOME_ATTRIBUTES } from "./scripts/constants";
-import { FILESYSTEM } from "./scripts/env_script";
+import { FILESYSTEM, generate } from "./scripts/env_script";
 
 import "./styles/App.css";
 
